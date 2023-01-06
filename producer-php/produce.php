@@ -8,6 +8,7 @@ require_once 'vendor/autoload.php';
 $config = new ProducerConfig();
 $config->setBootstrapServer('localhost:9092');
 $config->setUpdateBrokers(true);
+$config->setAutoCreateTopic(true);
 $config->setAcks(-1);
 
 $producer = new Producer($config);
